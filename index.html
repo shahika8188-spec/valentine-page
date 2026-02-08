@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Be My Valentine</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffd1dc;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background: #ff007f;
+      color: white;
+    }
+    #noBtn {
+      background: #ccc;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Will you be my Valentine?</h2>
+    <button id="yesBtn">Yes 💗</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseenter", () => {
+      const x = Math.random() * 150 - 75;
+      const y = Math.random() * 150 - 75;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+
+</body>
+</html>
